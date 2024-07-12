@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Pesquisa de Satisfação</h1>
+
+      <div class="question" id="question-atendimento">
+        <p>Atendimento: Você ficou satisfeito com a qualidade do atendimento que você recebeu?</p>
+        <button class="option satisfeito" data-category="atendimento" onclick="vote('atendimento', 'satisfeito')">
+          😊 Satisfeito
+        </button>
+        <button class="option neutro" data-category="atendimento" onclick="vote('atendimento', 'neutro')">
+          😐 Neutro
+        </button>
+        <button class="option insatisfeito" data-category="atendimento" onclick="vote('atendimento', 'insatisfeito')">
+          😞 Insatisfeito
+        </button>
+      </div>
+
+      <div class="question" id="question-sistema">
+        <p>Sistema: Você ficou satisfeito com a qualidade do nosso sistema?</p>
+        <button class="option satisfeito" data-category="sistema" onclick="vote('sistema', 'satisfeito')">
+          😊 Satisfeito
+        </button>
+        <button class="option neutro" data-category="sistema" onclick="vote('sistema', 'neutro')">
+          😐 Neutro
+        </button>
+        <button class="option insatisfeito" data-category="sistema" onclick="vote('sistema', 'insatisfeito')">
+          😞 Insatisfeito
+        </button>
+      </div>
+
+      <div class="comments">
+        <p>Comentários: Deixe aqui sua sugestão, reclamação ou melhorias que gostaria de compartilhar</p>
+        <textarea id="comentarios" rows="4" cols="50"></textarea>
+      </div>
+
+      <button class="submit" onclick="submitFeedback()">Enviar</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
